@@ -21,8 +21,9 @@
 }
 
 body {
-    background-color: var(--cor-3);
+   
     font-family:var(--font-secundaria) ;
+    background-image: url(imagens/Sem\ título.png);
 }
 header {
     background-color: #1F7343;
@@ -113,4 +114,13 @@ main > article > img {
     width: 1000px;
     height: 500px;
     border-radius: 8px;
+}
+
+.imgq {
+   position: fixed;
+   top: 140px;
+   left: -110px;
+   width: 400px;
+   height: auto;
+   translate: -10°;
 }
