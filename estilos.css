@@ -34,7 +34,7 @@ header {
 .container-flex {
     display: flex;
     align-items: center;
-    position: relative;
+    
 }
 
 .menu {
@@ -52,6 +52,7 @@ header {
 
 header > section > .menu > a {
     padding: 12px;
+    margin: 20px;
     text-decoration: none;
     color: white;
     background-color: rgb(17, 67, 17);
@@ -59,9 +60,39 @@ header > section > .menu > a {
    
 }
 
-header > section > .menu > a#princ {
-    margin-left: 10px;
+header > section > .menu > a:hover {
+    background-color: #62BF54;
 }
+
+#princ {
+    background-color: var(--cor-4);
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-right: 100px;
+    text-decoration: wavy;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+     animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(217,43,43,0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 12px rgba(217,43,43,0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(217,43,43,0);
+    }
+}
+
+#princ:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
 
 main {
     text-align: center;
