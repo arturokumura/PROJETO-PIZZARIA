@@ -175,16 +175,22 @@ div {
 }
 
 .card-pizza {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
     padding: 20px;
     margin-top: -0px;
 }
 
 .card-pizza  img {
     width: 300px;
-    height: 260px;
+    height: 250px;
   margin-top: -65px;
   
+  
 }
+
+
 
 .card-pizza > p {
     color: #420305;
@@ -194,7 +200,7 @@ div {
     font-family: var(--font-secundaria);
 }
 
-.card-pizza > img:hover {
+.card-pizza img:hover {
     transform: scale(1.08);
 }
 
