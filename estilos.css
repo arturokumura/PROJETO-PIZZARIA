@@ -28,19 +28,21 @@ body {
 header {
     background-color: #1F7343;
     height: 70px;
-    
+    position: sticky;
+    top: 0;
+    width:100%;
 }
-
 
 .container-flex {
     display: flex;
     align-items: center;
-    
+    flex-wrap: wrap;
+   
 }
 
 .menu {
     margin: auto;
-    padding: 24px;
+    padding: 14px;
 }
 
 .img {
@@ -66,8 +68,8 @@ header > section > .menu > a:hover {
 }
 
 #princ {
-    background-color: var(--cor-4);
-    padding: 8px 14px;
+    background-color: var(--cor-5);
+    padding: 10px 14px;
     border-radius: 6px;
     font-weight: bold;
     margin-right: 100px;
@@ -108,27 +110,22 @@ main > article > h1 {
 
 main> article > p {
     padding: 10px;
+    font-size: 14pt;
 }
 
 main > article > img {
-    width: 1000px;
-    height: 500px;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
     border-radius: 8px;
 }
 
-.imgq {
-   position: absolute;
-   top: 140px;
-   left: -110px;
-   width: 400px;
-   height: auto;
-   transition: transform 0.3s ease;
 
-}
 
 .imgq:hover {
    transform: scale(1.08);
 }
+
 
 article > h2 {
    
@@ -176,21 +173,20 @@ div {
 
 .card-pizza {
     display: flex;
-    gap: 20px;
-    padding: 20px;
-    padding: 20px;
+    gap: 25px;
+    padding: 25px;
+    
     margin-top: -0px;
+    background-color: (250, 245, 245);
 }
 
 .card-pizza  img {
     width: 300px;
     height: 250px;
-  margin-top: -65px;
+  margin-top: -80px;
   
   
 }
-
-
 
 .card-pizza > p {
     color: #420305;
@@ -204,3 +200,18 @@ div {
     transform: scale(1.08);
 }
 
+.tamp {
+    padding: 30px;
+    background-color: white;
+}
+
+
+.tamp > img {
+    width: 100%;
+    background-color: rgb(250, 245, 245);
+    transition: transform 0.3s ease;
+}
+
+.tamp > img:hover {
+    transform: scale(1.08);
+}
