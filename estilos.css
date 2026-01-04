@@ -461,7 +461,7 @@ input[type="submit"] {
 
 .apps > h3 {
     font-family: var(--font-principal);
-    font-size: ;
+    font-size: 18pt;
     color: var(--cor-4);
     padding-bottom: 20px;
     padding-top: 20px;
