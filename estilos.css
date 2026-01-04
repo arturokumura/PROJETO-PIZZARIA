@@ -32,6 +32,7 @@ header {
     position: sticky;
     top: 0;
     width:100%;
+    z-index:1000;
 }
 
 .container-flex {
@@ -105,7 +106,7 @@ main {
     
     width: 100%;
     height: 100vh;
-    background-image: url(imagens/pizza-inicio.jpg) ;
+    background-image: url(imagens/imagem-inicio.png) ;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -116,6 +117,7 @@ main > article > h1 {
     text-align: center;
     margin: 5px;
     padding-top: 10px;
+    font-size: 24pt;
 }
 
 main> article > p {
@@ -198,7 +200,7 @@ div {
     width: 260px;
     height: auto;
     margin-top: -60px;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
 .card-pizza > div {
@@ -216,12 +218,13 @@ div {
 }
 
 .card-pizza img:hover {
-    transform: scale(1.08);
+    transform: scale(1.04);
 }
 
 .tamp {
     padding: 30px;
     background-color: white;
+    transform: translateY(-6px);
 }
 
 
@@ -232,10 +235,242 @@ div {
 }
 
 .tamp > img:hover {
-    transform: scale(1.08);
+    transform: scale(1.04);
 }
 
 .meio {
-    background-color: rgb(240, 233, 233);
+    background-color: #f5efe9;
     padding: 15px;
+}
+
+.banner {
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  overflow: hidden;
+  transform: translateY(-20px);
+}
+
+.btn-destaque {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 28px;
+  background: #d62828;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-destaque:hover {
+  background: #a61c1c;
+  transform: scale(1.04);
+}
+
+.destaques {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.destaques .item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 12px 20px;
+  border-radius: 30px;
+  backdrop-filter: blur(4px);
+}
+
+.destaques span {
+  font-size: 1.6rem;
+}
+
+.destaques p {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--cor-4);
+  margin: 0;
+}
+
+.hero {
+  background: #fbf7f2;
+  padding: 80px 5%;
+  overflow: hidden;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero-conteudo {
+    font-family: var(--font-principal);
+    color: #420305;
+}
+
+.item > p {
+    font-size: 12pt;
+    font-family: var(--font-secundaria);
+}
+
+footer {
+    background-color: var(--cor-principal);
+}
+
+.pai {
+    background-color: #1F7343;
+    display: flex;
+    justify-content: space-between; /* distribui */
+    align-items: flex-start;        /* alinha no topo */
+    padding: 40px;
+}
+.logof {
+    background-color: #1F7343;
+}
+
+.logof > img  {
+   width: 260px;
+   height: 250px;
+}
+
+.logof > ul {
+    margin-left: 30px;
+}
+
+.redes {
+    
+   border-radius: 80px;
+   width: 40px;
+   height: 40px;
+   text-align: center;
+}
+
+.institucional {
+    background-color: #1F7343;
+    text-align: center;
+    min-width: 250px;
+    background-color: transparent;
+    
+}
+
+.institucional > h2 {
+    font-family: var(--font-principal);
+    color: var(--cor-4);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: 18pt;
+    text-decoration: underline;
+}
+
+.institucional ul {
+    list-style: none;
+    padding: 0;
+    .institucional ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+}
+
+.institucional li {
+    padding: 4px;
+    margin: 8px 0;
+    background-color: var(--cor-2);
+    width: 100px;
+    border-radius:100px;
+    text-align: center;
+}
+
+.institucional a {
+    color: #EBEFEB;
+    text-decoration: none;
+    font-size: 14pt;
+    transition: 0.3s;
+}
+
+.institucional a:hover {
+    transform: scale(1.04);
+    padding-left: 5px;
+}
+
+.contato {
+    background-color: #1F7343;
+    text-align: start;
+}
+
+.contato > h3 {
+    font-family: var(--font-principal);
+    color: var(--cor-4);
+    padding-bottom: 15px;
+    text-decoration: underline;
+    font-size: 18pt;
+
+}
+
+.container-flex {
+    padding-bottom: 15px;
+    border-radius: 10px;
+    background-color: #1F7343;
+}
+
+input::placeholder {
+  color: #aaa;
+  text-align: start;
+}
+
+#nome {
+   padding-bottom: 15px;
+   border-radius: 10px;
+}
+
+
+#mail {
+    padding-bottom: 15px;
+    border-radius: 10px;
+}
+
+#whats {
+    padding-bottom: 15px;
+    border-radius: 10px;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+  padding: 10px;
+  background-color: var(--cor-5);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.apps {
+    background-color: #1F7343;
+}
+
+.apps > h3 {
+    font-family: var(--font-principal);
+    font-size: ;
+    color: var(--cor-4);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: 18pt;
+    text-decoration: underline;
+}
+
+.apps > a > img {
+    width: 150px;
+    height: 80px;
+    padding: 8px;
 }
