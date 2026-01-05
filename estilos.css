@@ -33,26 +33,32 @@ header {
     top: 0;
     width:100%;
     z-index:1000;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
 }
 
 .container-flex {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-   
+   justify-content: center;
 }
 
 .menu {
     margin: auto;
     padding: 14px;
+    display: flex;
+    gap: 25px;
 }
 
 .img {
     position: absolute;
     left: 30px;
     width: 170px;
-    height: 60px;
+    height: 90px;
     padding: 10px;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 header > section > .menu > a {
@@ -62,11 +68,12 @@ header > section > .menu > a {
     color: white;
     background-color: rgb(17, 67, 17);
     border-radius: 30px;
-   
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 header > section > .menu > a:hover {
     background-color: #62BF54;
+   transform: translateY(-2px); 
 }
 
 #princ {
@@ -74,10 +81,13 @@ header > section > .menu > a:hover {
     padding: 10px 14px;
     border-radius: 6px;
     font-weight: bold;
-    margin-right: 100px;
+    position: absolute;
+    right: 30px;
     color: white;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-     animation: pulse 2s infinite;
+    animation: pulse 2s infinite;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+
 }
 
 @keyframes pulse {
@@ -103,14 +113,55 @@ main {
 }
 
 #inicio {
-    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 5%;
+    box-sizing: border-box;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url(imagens/imagem-inicio.png) ;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
+#inicio::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+#inicio h1,p {
+    position: relative;
+    z-index: 1;
+}
+
+ #inicio h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+#inicio p {
+    max-width: 650px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+#inicio h1::after {
+    content: "🍕";
+    display: block;
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+   
 main > article > h1 {
     font-family: var(--font-principal);
     color: var(--cor-5);
@@ -142,10 +193,10 @@ main > article > img {
 
 
 article > h2 {
-   
+    
     color: var(--cor-5);
     font-family: var(--font-principal);
-    font-size: 22pt;
+    font-size: 3rem;
     text-align: left;
     margin: 10px 15px 5px 15px; 
     padding-top: 25px;
@@ -243,6 +294,19 @@ div {
     padding: 15px;
 }
 
+.meio::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0)
+  );
+  pointer-events: none;
+}
+
 .banner {
   border-radius: 20px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
@@ -298,6 +362,8 @@ div {
   background: #fbf7f2;
   padding: 80px 5%;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-container {
@@ -311,6 +377,14 @@ div {
 .hero-conteudo {
     font-family: var(--font-principal);
     color: #420305;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    max-width: 700px;
+    width: 100%;
+    gap: 30px;
 }
 
 .item > p {
@@ -328,7 +402,17 @@ footer {
     justify-content: space-between; /* distribui */
     align-items: flex-start;        /* alinha no topo */
     padding: 40px;
+    gap: 40px;}
+   
+
+.logof,
+.institucional,
+.contato,
+.apps {
+    flex: 1;
+    min-width: 220px;
 }
+
 .logof {
     background-color: #1F7343;
 }
@@ -340,14 +424,21 @@ footer {
 
 .logof > ul {
     margin-left: 30px;
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
 }
 
 .redes {
-    
+   transition: transform 0.3s ease;
    border-radius: 80px;
    width: 40px;
    height: 40px;
    text-align: center;
+}
+
+.redes:hover {
+    transform: scale(1.1);
 }
 
 .institucional {
@@ -355,7 +446,9 @@ footer {
     text-align: center;
     min-width: 250px;
     background-color: transparent;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .institucional > h2 {
@@ -370,15 +463,12 @@ footer {
 .institucional ul {
     list-style: none;
     padding: 0;
-    .institucional ul {
-    padding: 0;
-    list-style: none;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-}
+
 
 .institucional li {
     padding: 4px;
@@ -443,8 +533,8 @@ input::placeholder {
 }
 
 input[type="submit"] {
-    margin-top: 10px;
   padding: 10px;
+  width: 160px;
   background-color: var(--cor-5);
   color: white;
   border: none;
@@ -453,6 +543,11 @@ input[type="submit"] {
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #a61c1c;
+    transform: translateY(-2px);
 }
 
 .apps {
